@@ -1,0 +1,84 @@
+### Health Check
+GET http://localhost:4000/api/v1/healthcheck
+Accept: application/json
+Content-Type: application/json
+
+### Create a user
+POST http://localhost:4000/api/v1/users
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "sammidev4@gmail.com",
+    "name": "sammi",
+    "password": "sammidev123"
+}
+
+### activate user
+PUT http://localhost:4000/api/v1/users/activated
+Accept: application/json
+Content-Type: application/json
+
+{
+    "token": "PZB3SQNCD3TRU27QSXBXK3UYAE"
+}
+
+### login 
+POST http://localhost:4000/api/v1/tokens/authentication
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email" :"sammidev4@gmail.com",
+    "password" :"sammidev123"
+}
+
+### get all movies
+GET http://localhost:4000/api/v1/movies
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer O7GNIKBGQE4X6NDD4ITM2TKLNY
+
+### create a movie
+POST http://localhost:4000/api/v1/movies
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer O7GNIKBGQE4X6NDD4ITM2TKLNY
+
+{
+    "title": "belajar go",
+    "runtime": "20 mins",
+    "year": 2020,
+    "genres": [
+        "a",
+        "b"
+    ]
+}
+
+### get movie by id
+GET http://localhost:4000/api/v1/movies/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer O7GNIKBGQE4X6NDD4ITM2TKLNY
+
+### update a movie
+PATCH http://localhost:4000/api/v1/movies/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer O7GNIKBGQE4X6NDD4ITM2TKLNY
+
+{
+    "title": "belajar go update",
+    "runtime": "100 mins",
+    "year": 2022,
+    "genres": [
+        "a",
+        "b",
+        "c"
+    ]
+}
+### delete a movie
+DELETE http://localhost:4000/api/v1/movies/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer O7GNIKBGQE4X6NDD4ITM2TKLNY
